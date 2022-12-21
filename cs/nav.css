@@ -3,63 +3,72 @@ nav {
   justify-content: space-between;
   align-items: center;
   background-color: #333;
-  position: relative;
+  position: relative; /* needed for the hamburger icon */
 }
 
-.logo {
-  color: #fff;
-  font-size: 22px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.nav-links {
-  display: flex;
+nav ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background-color: #333;
-  transform: translateY(-100%);
-  transition: all 0.5s ease-in-out;
+  display: flex;
+  flex-wrap: wrap; /* allow items to wrap onto multiple lines */
 }
 
-.nav-links.active {
-  transform: translateY(0);
-}
-
-.nav-links li {
+nav li {
   margin: 0 20px;
 }
 
-.nav-links a {
+nav a {
   color: #fff;
   text-decoration: none;
   font-size: 18px;
 }
 
-.nav-links a:hover {
+nav a:hover {
   color: #999;
 }
 
-.menu-icon {
-  display: none; /* hide menu icon on medium and large screens */
+.get-started {
+  margin-left: auto; /* push Get Started button to the far right */
 }
 
-.menu-icon i {
+.get-started a {
+  background-color: #f33;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
   color: #fff;
+  transition: background-color 0.2s ease-in;
+}
+
+.get-started a:hover {
+  background-color: #f66;
+}
+
+/* Hamburger icon styles */
+.hamburger-icon {
+  display: none; /* hide the icon by default */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
 }
 
-/* Responsive styles */
-@media screen and (max-width: 768px) {
-  .nav-links {
-    display: none; /* hide nav links on small screens */
+.hamburger-icon span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  margin: 5px 0;
+}
+
+/* Hide the nav items on small screens */
+@media only screen and (max-width: 600px) {
+  nav ul {
+    display: none; /* hide the nav items */
   }
-  .menu-icon {
-    display: block; /* show menu icon on small screens */
+
+  .hamburger-icon {
+    display: block; /* show the icon */
   }
 }
