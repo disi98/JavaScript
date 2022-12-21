@@ -1,43 +1,65 @@
 nav {
   display: flex;
-  justify-content: flex-end; /* align items to the right */
+  justify-content: space-between;
   align-items: center;
   background-color: #333;
+  position: relative;
 }
 
-nav ul {
-  list-style: none;
+.logo {
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.nav-links {
   display: flex;
-  flex-direction: row; /* arrange items horizontally */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  transform: translateY(-100%);
+  transition: all 0.5s ease-in-out;
 }
 
-nav li {
+.nav-links.active {
+  transform: translateY(0);
+}
+
+.nav-links li {
   margin: 0 20px;
 }
 
-nav a {
+.nav-links a {
   color: #fff;
   text-decoration: none;
   font-size: 18px;
 }
 
-nav a:hover {
+.nav-links a:hover {
   color: #999;
 }
 
-.get-started {
-  margin-left: auto; /* push Get Started button to the far right */
+.menu-icon {
+  display: none; /* hide menu icon on medium and large screens */
 }
 
-.get-started a {
-  background-color: #f33;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-weight: bold;
+.menu-icon i {
   color: #fff;
-  transition: background-color 0.2s ease-in;
+  cursor: pointer;
 }
 
-.get-started a:hover {
-  background-color: #f66;
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none; /* hide nav links on small screens */
+  }
+  .menu-icon {
+    display: block; /* show menu icon on small screens */
+  }
 }
