@@ -19,3 +19,6 @@ $(document).ready(function() {
     $('nav ul').slideToggle();
   });
 });
+
+
+document.getElementById("add").innerText = 5
