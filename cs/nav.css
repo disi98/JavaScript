@@ -55,4 +55,11 @@ nav {
 }
 
 /* Responsive styles */
-@media screen and (
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none; /* hide nav links on small screens */
+  }
+  .menu-icon {
+    display: block; /* show menu icon on small screens */
+  }
+}
