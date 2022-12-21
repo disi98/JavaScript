@@ -1,2 +1,6 @@
-const messageElement = document.getElementById("message");
-messageElement.textContent = "Hello, JavaScript!";
+$(document).ready(function() {
+  // Toggle the nav links when the menu icon is clicked
+  $('.menu-icon').on('click', function() {
+    $('.nav-links').toggleClass('active');
+  });
+});
