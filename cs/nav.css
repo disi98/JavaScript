@@ -3,63 +3,36 @@ nav {
   justify-content: space-between;
   align-items: center;
   background-color: #333;
-  position: relative;
 }
 
-.logo {
-  color: #fff;
-  font-size: 22px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.nav-links {
-  display: flex;
+nav ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background-color: #333;
-  transform: translateY(-100%);
-  transition: all 0.5s ease-in-out;
+  display: flex;
 }
 
-.nav-links.active {
-  transform: translateY(0);
-}
-
-.nav-links li {
+nav li {
   margin: 0 20px;
 }
 
-.nav-links a {
+nav a {
   color: #fff;
   text-decoration: none;
   font-size: 18px;
 }
 
-.nav-links a:hover {
+nav a:hover {
   color: #999;
 }
 
-.menu-icon {
-  display: none; /* hide menu icon on medium and large screens */
-}
-
-.menu-icon i {
+.get-started a {
+  background-color: #f33;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
   color: #fff;
-  cursor: pointer;
+  transition: background-color 0.2s ease-in;
 }
 
-/* Responsive styles */
-@media screen and (max-width: 768px) {
-  .nav-links {
-    display: none; /* hide nav links on small screens */
-  }
-  .menu-icon {
-    display: block; /* show menu icon on small screens */
-  }
+.get-started a:hover {
+  background-color: #f66;
 }
