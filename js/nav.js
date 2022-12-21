@@ -21,4 +21,4 @@ $(document).ready(function() {
 });
 
 
-document.getElementById("add").innerText = 5
+document.getElementById("add").textContent = 5;
