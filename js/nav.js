@@ -15,7 +15,7 @@ $(document).ready(function() {
   });
 
   // Toggle the visibility of the nav items when the hamburger icon is clicked
-  $('.hamburger-icon').on('click', function() {
+  $('.menu-icon').on('click', function() {
     $('nav ul').slideToggle();
   });
 });
