@@ -1,65 +1,53 @@
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.navbar {
   background-color: #333;
-  position: relative;
 }
 
-.logo {
-  color: #fff;
-  font-size: 22px;
-  font-weight: bold;
+.navbar a {
+  color: white;
+  font-size: 16px;
   text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
-.nav-links {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background-color: #333;
-  transform: translateY(-100%);
-  transition: all 0.5s ease-in-out;
+.navbar a:hover {
+  color: #f1c40f;
 }
 
-.nav-links.active {
-  transform: translateY(0);
+.nav-item.btn {
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 20px;
+  margin-left: 20px;
 }
 
-.nav-links li {
-  margin: 0 20px;
+.nav-item.btn a {
+  color: white;
+  font-size: 14px;
+  padding: 10px 20px;
 }
 
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
+.nav-item.btn a:hover {
+  background-color: #f1c40f;
+  color: #333;
 }
 
-.nav-links a:hover {
-  color: #999;
-}
-
-.menu-icon {
-  display: none; /* hide menu icon on medium and large screens */
-}
-
-.menu-icon i {
-  color: #fff;
-  cursor: pointer;
-}
-
-/* Responsive styles */
-@media screen and (max-width: 768px) {
-  .nav-links {
-    display: none; /* hide nav links on small screens */
+@media (max-width: 992px) {
+  .navbar-nav {
+    display: none;
   }
-  .menu-icon {
-    display: block; /* show menu icon on small screens */
+
+  .navbar-toggler {
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-nav {
+    display: flex;
+  }
+
+  .navbar-toggler {
+    display: none;
   }
 }
