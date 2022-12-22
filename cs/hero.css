@@ -39,7 +39,7 @@
 .cta {
   background-color: #333;
   color: white;
-  padding: 20px 0;
+  padding: 1px 0;
 }
 
 .cta .container {
@@ -56,7 +56,7 @@
   font-weight: bold;
   letter-spacing: 2px;
   text-transform: uppercase;
-  padding: 15px 30px;
+  padding: 5px;
   transition: background-color 0.2s ease-in-out;
 }
 
@@ -67,6 +67,6 @@
 @media (max-width: 992px) {
   .cta .btn {
     font-size: 14px;
-    padding: 10px 20px;
+    padding: 5px;
   }
 }
