@@ -1,33 +1,74 @@
-.navbar {
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #333;
+  position: relative; /* needed for the hamburger icon */
 }
 
-.navbar a {
-  color: white;
-  font-size: 16px;
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 2px;
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap; /* allow items to wrap onto multiple lines */
 }
 
-.navbar a:hover {
-  color: #f1c40f;
+nav li {
+  margin: 0 20px;
 }
 
-.nav-item.btn {
-  background-color: transparent;
-  border: 2px solid white;
-  border-radius: 20px;
-  margin-left: 20px;
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
 }
 
-.nav-item.btn a {
-  color: white;
-  font-size: 14px;
+nav a:hover {
+  color: #999;
+}
+
+.get-started {
+  margin-left: auto; /* push Get Started button to the far right */
+}
+
+.get-started a {
+  background-color: #f33;
   padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #fff;
+  transition: background-color 0.2s ease-in;
 }
 
-.nav-item.btn a:hover {
-  background-color: #f1c40f;
-  color: #333;
+.get-started a:hover {
+  background-color: #f66;
+}
+
+/* Hamburger icon styles */
+.hamburger-icon {
+  display: none; /* hide the icon by default */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  margin: 5px 0;
+}
+
+/* Hide the nav items on small screens */
+@media only screen and (max-width: 600px) {
+  nav ul {
+    display: none; /* hide the nav items */
+  }
+
+  .hamburger-icon {
+    display: block; /* show the icon */
+  }
 }
